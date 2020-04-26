@@ -1,2 +1,20 @@
-config:
-  info: "config info for local(master)"
+spring:
+  application:
+    name: ribbon-local-service
+
+server:
+  port: 8006
+
+logging:
+  level:
+    root: info
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://root:root@replica1:8101/eureka/,http://root:root@replica2:8102/eureka/
+
+user-service:
+  name: user-local-service
