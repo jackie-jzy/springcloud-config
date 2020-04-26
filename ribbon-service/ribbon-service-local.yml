@@ -1,3 +1,6 @@
+config:
+  info: "config info for local(master)"
+
 spring:
   application:
     name: ribbon-local-service
